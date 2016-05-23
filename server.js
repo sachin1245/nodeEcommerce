@@ -1,6 +1,12 @@
 var express = require('express');
+var morgan = require('morgan');
 var app = express();
 var PORT = process.env.PORT || 3000;
+
+
+//middleware
+
+app.use(morgan('dev'));
 
 app.get('/',function(req,res){
 
